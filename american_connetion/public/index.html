@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>American Connetion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <p>Crear un archivo</p>
+        <form action="/crear" method="get">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre del archivo</label>
+            <input type="text" class="form-control" name="nombre" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Contenido</label>
+            <textarea class="form-control" name="contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div>
+            <button type="submit" class='btn btn-primary'>Crear Archivo</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-3">
+        <p>Leer un archivo</p>
+        <form action="/leer" method="get">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre del archivo</label>
+            <input type="text" name='nombreLeer' class="form-control" id="exampleFormControlInput1">
+          </div>        
+          <div>
+            <button type="submit" class="btn btn-info">Consultar Archivo</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-3">
+        <p>Renombrar un archivo</p>
+        <form action="/renombrar" method="get">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre del archivo</label>
+            <input type="text" name="nombreActual" class="form-control" id="exampleFormControlInput1">
+          </div>   
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nuevo nombre del archivo</label>
+            <input type="text" name="nuevoNombre" class="form-control" id="exampleFormControlInput1">
+          </div>        
+          <div>
+            <button type="submit"class="btn btn-warning">Renombrar Archivo</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-3">
+        <p>Eliminar un archivo</p>
+        <form action="/eliminar" method="get">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre del archivo</label>
+            <input type="text" name="archivoEliminar" class="form-control" id="exampleFormControlInput1">
+          </div>        
+          <div>
+            <button type="submit"class="btn btn-danger">Eliminar Archivo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
